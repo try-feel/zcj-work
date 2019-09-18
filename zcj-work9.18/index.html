@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<input type="text" name="text1" id="t1" value="" />
+	<span id="">
+		+
+	</span>
+	<input type="text" name="text2" id="t2" value="" />
+	<input type="button" name="btn" id="btn" value="点击数字相加" />
+	<div id="div1">
+		
+	</div>
+	<body>
+		<script type="text/javascript">
+			var btn = document.getElementById("btn");
+			var t1 = document.getElementById("t1");
+			var t2 = document.getElementById("t2");
+			var dv = document.getElementById("div1");
+			btn.onclick=function(){
+				var n1 = parseInt(t1.value)+parseInt(t2.value);
+				if(n1==""){
+					alert("请输入内容");
+				}else if(isNaN(n1)){
+					alert("请输入数字");
+					confirm;
+				}else{
+					dv.innerText="等于"+(n1);
+				}
+			}
+		</script>
+	</body>
+</html>

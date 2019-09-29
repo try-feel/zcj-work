@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		用户名：<input type="text" id="y" />
+		<span id="span"></span>
+		<br />
+		密码：<input type="password" id="m" />
+		<span id="span1"></span>
+		<br />
+		<button id="btn">注册用户</button>
+		<script>
+			var y = document.getElementById('y');
+			var m = document.getElementById('m');
+			var btn = document.getElementById('btn');
+			var Name = ['tom','jack','lili'];
+
+            y.onblur = function(){
+			   if(y.value==''){
+				}else if(Name.indexOf(y.value)!=-1){
+				}else{
+			
+				}
+			}
+			m.onblur = function(){
+				if(m.value==''){
+					span1.innerText = '请输入密码';
+				}else if(m.value.length<6){
+					span1.innerText = '设置的密码要大于6位数';
+				}else{
+					span1.innerHTML = '';
+				}
+			}
+			btn.onclick=function(){
+				if(y.value==''){
+					span.innerHTML = '用户名不能为空';
+				}else if(Name.indexOf(y.value) !=-1){
+					span.innerHTML = '用户名重复';
+				}else if(m.value==''){
+					span1.innerHTML = '密码不能为空';
+				}else if(m.value.length<6){
+					
+				}else{
+					alert('注册成功');
+				}
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+footer{
+    background-color: rgb(37,37,37);
+}
+footer .container{
+    width: 1140px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.6);
+}
+footer .container a{
+    color: rgba(255, 255, 255, 0.6);
+}
+footer .container .row,
+footer .container .subRow{
+    overflow: hidden;
+}
+footer .container .row:nth-child(1){
+    padding-top: 72px;
+}
+footer .container .row:nth-child(2){
+    margin-top: 36px;
+}
+footer .container .row .left,
+footer .container .row .right{
+    float: left;
+    width: 50%;
+}
+footer .container .row .right .txt-list{
+    overflow: hidden;
+}
+footer .container .row .right .txt-list li{
+    float: left;
+    width: 50%;
+    line-height: 28px;
+}
+footer .container .row .right .txt-list li a{
+    font-size: 12px;
+}
+footer .container .row .right .txt-list li a:hover,
+footer .container .row > .left > a:hover{
+    color: #fff;
+}
+footer .container .row > .left a:nth-child(1){
+    margin-right: 50px;
+}
+footer .container .row > .left a + a{
+    margin-right: 20px;
+}
+footer .container .row .title{
+    margin-bottom: 28px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+footer .container .row .subRow .left form{
+    position: relative;
+    width: 270px;
+    height: 35px;
+}
+footer .container .row .subRow .left form input{
+    width: 100%;
+    height: 33px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    color: #fff;
+}
+footer .container .row .subRow .left form button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 33px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+footer .container .end{
+    padding: 56px 0 80px;
+    font-size: 14px;
+    text-align: center;
+}
+footer .container .end a{
+    color: #fff;
+}

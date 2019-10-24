@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<input type="text" name="txt" id="txt" value="" />
+		<div>
+			成员：大哥,俊飞,纪伟,郑直,宇航,帅杰
+		</div>
+		<input type="button" name="btn" id="btn" value="签到"/>
+		<div id="md">
+			
+		</div>
+		<div id="md1">
+			
+		</div>
+		<script type="text/javascript">
+			var txt=document.getElementById("txt");
+			var btn=document.getElementById("btn");
+			var md=document.getElementById("md");
+			var md1=document.getElementById("md1");
+			var na=["大哥","帅杰","俊飞","纪伟","宇航","郑直"];
+			var nna=[];
+			btn.onclick=function(){
+				var tx = txt.value;
+				if(tx!=na[na.indexOf(tx)]){
+					alert("不存在");
+				}else{
+					var newa=nna.join(",");
+					if(tx!=newa.match(/大哥|帅杰|俊飞|纪伟|宇航|郑直/)){
+						nna.push(tx);
+					}else{
+						alert("您已签到");
+					}
+				}
+				md1.innerText="未签到"+(na.length-nna.length);
+				md.innerText=nna;
+			}
+		</script>
+	</body>
+</html>

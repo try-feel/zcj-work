@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.10.2/jquery.js"></script>
+		<style type="text/css">
+			.conter{
+				width:1100px;
+				height:1100px;
+				background-color:palevioletred;
+				margin: 0 auto;
+			}
+			.conter ul li{
+				float: left;
+				margin-left:20px ;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				list-style: none;
+				background-color: palevioletred;
+				margin-top: 30px;
+				box-shadow:3px 2px 3px 2px #333333;
+				transform: 1s;
+				display: none;
+				
+			}
+			.conter ul li:nth-child(1){
+				background-color:palevioletred;
+				display: block;
+			}
+			.conter ul li:nth-child(2){
+				background-color:yellow;
+			}
+			.conter ul li:nth-child(3){
+				background-color:black;
+			}
+			.conter ul li:nth-child(4){
+				background-color:blueviolet;
+			}
+			.conter ul li:nth-child(5){
+				background-color:brown;
+			}
+			.conter ul li:nth-child(6){
+				background-color:pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="conter">	
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>	
+		</div>
+		<script type="text/javascript">
+			 $('li:nth-child(1)').click(function(){
+            	$(".conter").css({'background-color':'dodgerblue'})
+            })
+			$('li:nth-child(2)').click(function(){
+            	$(".conter").css({'background-color':'yellow'})
+            })
+			$('li:nth-child(3)').click(function(){
+            	$(".conter").css({'background-color':'black'})
+            })
+			$('li:nth-child(4)').click(function(){
+            	$(".conter").css({'background-color':'blueviolet'})
+            })
+			$('li:nth-child(5)').click(function(){
+            	$(".conter").css({'background-color':'brown'})
+            })
+			$('li:nth-child(6)').click(function(){
+            	$(".conter").css({'background-color':'pink'})
+           })
+			   var ist =true;
+				$('li:nth-child(1)').click(function(){
+				  if(ist){
+				  	ist=false;
+				  	$('li').css("display","block")  
+				  }else{
+				  	    ist=true;
+				  			$('li').css("display","none")
+				        	$('li:nth-child(1)').css("display","block")
+				   }
+		})
+		</script>
+		
+	</body>
+</html>

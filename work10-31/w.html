@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <!-- 华为mate20 -->
+    <input type="checkbox" id="ch" name="">
+    <span id="mata">华为mata20</span>
+    <input type="number" id="num">
+    单价:<span id="price">5000</span>
+    合计:<input type="text" id="txt">
+    <br>
+    <!-- 小米8 -->
+    <input type="checkbox" id="ch1" name="">
+    <span id="mi">小米8</span>
+    <input type="number" id="num1">
+    单价:<span id="price1">3000</span>
+    合计:<input type="text" id="txt1">
+    <br>
+    <!-- 合计 -->
+        共<span id="shop"></span>件商品
+        合计<input type="text" id="money">元
+    <script>
+    	//华为mata20
+        $("#ch,#num").change(function(){
+        	if($("#ch").is(':checked')==true){
+        		$("#txt").val($("#num").val()*$("#price").text());
+        	}else{
+        		$("#txt").val('');
+        	}
+        })
+        //小米8
+         $("#ch1,#num1").change(function(){
+        	if($("#ch1").is(':checked')==true){
+        		$("#txt1").val($("#num1").val()*$("#price1").text());
+        	}else{
+        		$("#txt1").val('');
+        	}
+        })
+         //合计
+         $("#ch,#ch1,#num,#num1").change(function(){
+         	if($("#ch").is(':checked') == true||$("#ch1").is(':checked') == true){
+         		$("#shop").text(Number($("#num").val())+Number($("#num1").val()));
+         		$("#money").val(Number($("#txt").val())+Number($("#txt1").val()))
+         	}else{
+         		$("#shop").val('');
+         	}
+         })
+    </script>
+</body>
+</html>

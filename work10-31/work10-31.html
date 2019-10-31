@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        p{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" cellspacing="0">
+        <tr>
+            <td><input type="checkbox" name="" id="che1"></td>
+            <td><span>华为mate20</span></td>
+            <td><input type="text" id="txt1" value="1"></td>
+            <td><span>单价:<p id="danjia1">3888</p></span></td>
+            <td><span>合计:<p id="hj1">0</p></span></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="che2"></td>
+            <td><span>小米8</span></td>
+            <td><input type="text" value="1" id="txt2"></td>
+            <td><span>单价:<p id="danjia2">1555</p></span></td>
+            <td><span>合计:<p id="hj2">0</p></span></td>
+        </tr>
+            
+    </table>
+    		<span>共<p id="sum">0</p>件商品</span>
+        	<span>合计：<p id="gj">0</p></span>
+    <script>
+        $('#txt1,#che1').change(function(){
+            if($('#che1').is(':checked') == true){
+                $('#hj1').html($('#txt1').val()*$('#danjia1').html());
+            }else{
+                $('#hj1').html('')
+            }
+        })
+        
+        $('#txt2,#che2').change(function(){
+            if($('#che2').is(':checked') == true){
+                $('#hj2').html($('#txt2').val()*$('#danjia2').html());
+            }else{
+                $('#hj2').html('')
+            }
+        })
+        $('#che1,#che2,#txt1,#txt2').change(function(){
+            if($('#che1').is(':checked') == true && $('#che2').is(':checked') == true){
+                $('#sum').html(Number($('#txt1').val())+Number($('#txt2').val()))
+                $('#gj').html(Number($('#hj1').html())+Number($('#hj2').html()))
+            }else if($('#che1').is(':checked') == true){
+                $('#sum').html(Number($('#txt1').val()))
+                $('#gj').html(Number($('#hj1').html()))
+            }else if($('#che2').is(':checked') == true){
+                $('#sum').html(Number($('#txt2').val()))
+                $('#gj').html(Number($('#hj2').html()))
+            }else{
+                $('#sum').html(0)
+                $('#gj').html(0)
+            }
+        })
+    </script>
+</body>
+</html>
